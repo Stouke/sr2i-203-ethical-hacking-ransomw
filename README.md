@@ -4,11 +4,13 @@
 
 Dans un but éducatif, ce projet concerne la création d'un ransomware et de l'exploitation d'une vulnérabilité Windows pour l'utiliser. 
 
-Commençons par rappeler le principe d'un ransomware: Il s'agit d'un logiciel malveillant qui lors de son execution chiffre l'ensemble des fichiers présents sur l'ordinateur de la victime. La victime n'a donc plus accès à ses fichiers qui sont cryptés et seul l'attaquant possède la clé de déchiffrement. 
+Commençons par rappeler le principe d'un ransomware: Il s'agit d'un logiciel malveillant qui lors de son execution chiffre l'ensemble des fichiers présents sur l'ordinateur de la victime. La victime n'a donc plus accès à ses fichiers qui sont cryptés et seul l'attaquant possède la clé de déchiffrement. Ces attaques sont parmi les attaques informatiques les plus répandues alors nous vous recommandons de ne jamais ouvrir un fichier sans vérification, que vous le receviez par mail ou autre.
+
+
 
 Le ransomware que nous allons créer repose sur les fonctions encrypt_file et decrypt_file qui vont servir à chiffrer et dechiffrer les fonctions.
 
-La fonction check_key() sert à vérifier que la clé entré par la victime est correcte. Si c'est le cas, les fichiers sont déchiffrés.
+La fonction check_key() sert à vérifier que la clé entrée par la victime est correcte. Si c'est le cas, les fichiers sont déchiffrés.
 
 ## Demonstration de l'exécution du ransomware
 
