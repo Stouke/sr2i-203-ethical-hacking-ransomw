@@ -70,13 +70,16 @@ if msg == "key":
 De son côté, la victime reçoit un fichier .exe nommé contactEmployee avec une icone d'un fichier Excel. 
 Elle pense alors ouvrir un fichier excel banal mais en réalité elle ouvre un executable qui va executer le code python suivant:
 ![alt text](screenshots/executable.png "Ransomware camouflé")
+
+
 Sur l'image, il s'agit de Windows 7 mais le ransomware fonctionne sur toutes les versions de Windows postérieurs à Windows 7.
 
 
 Lorsque l'executable se lance, tous les fichiers du dossier "Important" sont chiffrés et une fenêtre apparaît avec un compte à rebours, la victime doit entrer la clé que l'attaquant possède sinon les fichiers seront supprimés.
 
-![alt text](screenshots/executable2.png "Ransomware camouflé" =250x)
-![alt text](screenshots/executable3.png "Ransomware camouflé"=500x)
+
+![alt text](screenshots/executable2.png "Ransomware camouflé")
+![alt text](screenshots/executable3.png "Ransomware camouflé")
 
 Le code éxécuté est:
 
