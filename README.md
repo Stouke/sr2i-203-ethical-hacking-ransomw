@@ -75,8 +75,8 @@ Sur l'image, il s'agit de Windows 7 mais le ransomware fonctionne sur toutes les
 
 Lorsque l'executable se lance, tous les fichiers du dossier "Important" sont chiffrés et une fenêtre apparaît avec un compte à rebours, la victime doit entrer la clé que l'attaquant possède sinon les fichiers seront supprimés.
 
-![alt text](screenshots/executable2.png "Ransomware camouflé")
-![alt text](screenshots/executable3.png "Ransomware camouflé")
+![alt text](screenshots/executable2.png "Ransomware camouflé" =250x)
+![alt text](screenshots/executable3.png "Ransomware camouflé"=500x)
 
 Le code éxécuté est:
 
