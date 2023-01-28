@@ -6,13 +6,13 @@ Dans un but éducatif, ce projet concerne la création d'un ransomware et de l'e
 
 Commençons par rappeler le principe d'un ransomware: Il s'agit d'un logiciel malveillant qui lors de son execution chiffre l'ensemble des fichiers présents sur l'ordinateur de la victime. La victime n'a donc plus accès à ses fichiers qui sont cryptés et seul l'attaquant possède la clé de déchiffrement. 
 
-Le ransomware que nous allons créer repose sur les fonctions
+Le ransomware que nous allons créer repose sur les fonctions encrypt_file et decrypt_file qui vont servir à chiffrer et dechiffrer les fonctions.
+
+La fonction check_key() sert à vérifier que la clé entré par la victime est correcte. Si c'est le cas, les fichiers sont déchiffrés.
 
 ## Demonstration de l'exécution du ransomware
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
-![](https://github.com/sr2i-203-ethical-hacking-ransomw/vid/demo.mp4)
-
+![](vid/demo.mp4)
 
 
 ## Principe de notre code
@@ -216,6 +216,12 @@ root.mainloop()
 Le fichier .exe a été généré à l'aide de Pyinstaller. Sur l'image, il s'agit de Windows 7 mais le ransomware fonctionne sur toutes les versions de Windows postérieurs à Windows 7.
 
 
+## Exploitation de Eternalblue doublepulsar
+
+##Difficultés rencontrées
+- J'ai rencontré des difficultés à déchiffrer le fichier. Le fichier déchiffré était vide, j'ai passé beaucoup d'heures à trouver d'ou venait le problème.
+- Lors de la conversion du fichier python en .exe, je devais rendre possible l'execution du fichier .exe sur un système Windows 7 pour pouvoir exploiter la faille. Cela m'a aussi pris du temps.
+
 
 ## Améliorations possibles
 
@@ -223,3 +229,4 @@ Le fichier .exe a été généré à l'aide de Pyinstaller. Sur l'image, il s'ag
 - Dans notre code, le serveur arrête d'écouter dès qu'une victime lance le script. Il est préférable que le serveur reste en écoute et génère plusieurs clés pour chaque utilisateur qui se connecte. 
 - Il est possible d'améliorer le ransomware pour qu'il se diffuse aux autres ordinateurs du réseau mais ça demande un travail assez conséquent.
 - Ici, notre ransomware serait facilement arrêté par un antivirus mais mes tests ont montré qu'il est possible de bypasser l'anti-virus en executant le .exe depuis le terminal. 
+- La clé pour dechiffrer n'est pas difficilement trouvable vu qu'elle n'est pas réellement effacé. Cependant, l'effacer n'est pas difficile mais je n'ai pas pu continuer par manque de temps.
