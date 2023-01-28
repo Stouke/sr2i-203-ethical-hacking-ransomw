@@ -82,6 +82,8 @@ Lorsque l'executable se lance, tous les fichiers du dossier "Important" sont chi
 ![alt text](screenshots/executable2.png "Ransomware camouflé")
 ![alt text](screenshots/executable3.png "Ransomware camouflé")
 
+
+
 Le code éxécuté est:
 
 ```python
@@ -216,9 +218,16 @@ root.mainloop()
 Le fichier .exe a été généré à l'aide de Pyinstaller. Sur l'image, il s'agit de Windows 7 mais le ransomware fonctionne sur toutes les versions de Windows postérieurs à Windows 7.
 
 
+
+
 ## Exploitation de Eternalblue doublepulsar
 
-##Difficultés rencontrées
+A venir
+
+
+
+
+## Difficultés rencontrées
 - J'ai rencontré des difficultés à déchiffrer le fichier. Le fichier déchiffré était vide, j'ai passé beaucoup d'heures à trouver d'ou venait le problème.
 - Lors de la conversion du fichier python en .exe, je devais rendre possible l'execution du fichier .exe sur un système Windows 7 pour pouvoir exploiter la faille. Cela m'a aussi pris du temps.
 
