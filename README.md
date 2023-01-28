@@ -27,11 +27,13 @@ Commençons par
 
 Considérons deux machines A et V, les machines de l'attaquant et de la victime.
 Le principe est le suivant: 
-L'attaquant lance le fichier server.py qui va ouvrir une socket qui va rester "listening" en attendant une connexion. Elle va par la même occasion 
+L'attaquant lance le fichier server.py qui va ouvrir une socket qui va rester "listening" en attendant une connexion. Elle va par la même occasion afficher la clé pouvant servir à déchiffrer les fichiers.
 
 ![alt text](screenshots/server.png "Lancement du serveur sur la machine A")
 
+
 Lorsque la victime execute le ransomware, l'attaquant reçoit alors son IP : 
+
 ![alt text](screenshots/server2.png "La victime a executé e ransomware")
 
 
@@ -73,7 +75,6 @@ Elle pense alors ouvrir un fichier excel banal mais en réalité elle ouvre un e
 
 
 Sur l'image, il s'agit de Windows 7 mais le ransomware fonctionne sur toutes les versions de Windows postérieurs à Windows 7.
-
 
 Lorsque l'executable se lance, tous les fichiers du dossier "Important" sont chiffrés et une fenêtre apparaît avec un compte à rebours, la victime doit entrer la clé que l'attaquant possède sinon les fichiers seront supprimés.
 
