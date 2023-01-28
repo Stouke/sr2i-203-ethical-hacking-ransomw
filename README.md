@@ -22,10 +22,7 @@ https://user-images.githubusercontent.com/123843120/215294573-ec373cbd-2dfa-4c0d
 ## Principe de notre code
 
 Nous allons utiliser un protocole de chiffrement symétrique. Il est toutefois possible d'utiliser un chiffrement asymétrique. Le chiffrement symétrique consiste à chiffrer un fichier avec une clé privé et le déchiffrer avec cette même clé. Le mot "symétrie" vient du fait qu'on utilise la même clé pour le chiffrement et déchiffrement.
-Le ransomware a été configuré pour ne chiffrer que les fichiers présents dans le dossier nommé "Important" pour des raisons pratiques. 
-
-
-Commençons par 
+Le ransomware a été configuré pour ne chiffrer que les fichiers présents dans le dossier nommé "Important" pour des raisons pratiques. Pour la même raison, la fenêtre demandant d'entrer la clé peut être fermé, ce qui n'est pas le cas en réalité.
 
 ## Coté attaquant
 
