@@ -14,7 +14,9 @@ La fonction check_key() sert à vérifier que la clé entrée par la victime est
 
 ## Demonstration de l'exécution du ransomware
 
-![](vid/demo.mp4)
+
+https://user-images.githubusercontent.com/123843120/215294573-ec373cbd-2dfa-4c0d-8bf9-4f55f41da392.mp4
+
 
 
 ## Principe de notre code
