@@ -85,7 +85,7 @@ Lorsque l'executable se lance, tous les fichiers du dossier "Important" sont chi
 
 
 
-Le code éxécuté est:
+Le code exécuté est:
 
 ```python
 from cryptography.fernet import Fernet
@@ -217,6 +217,8 @@ root.mainloop()
 
 ```
 Le fichier .exe a été généré à l'aide de Pyinstaller. Sur l'image, il s'agit de Windows 7 mais le ransomware fonctionne sur toutes les versions de Windows postérieurs à Windows 7.
+La commande pour générer le fichier à partir de Pyinstaller est ```pyinstaller --onefile --icon=icon.ico malware.py```. Dans mon cas, j'ai eu une erreur concernant la bibliothèque pyfiglet, j'ai pu la résoudre en ajoutant: ``` --collect-all pyfiglet```. Je conseille d'utiliser pyinstaller directement sur Windows 7 pour s'assurer de la compatibilité de l'executable avec Windows 7.
+
 
 
 
@@ -268,9 +270,9 @@ Le moyen le plus efficace pour moi est de passer par le Powershell, pour cela on
 
 Ensuite, il ne reste plus qu'à se rendre dans le répertoire "Desktop" avec l'invité de commande et à executer le fichier avec ```./employeeData.exe```
 
-## Difficultés rencontrées
-- J'ai rencontré des difficultés à déchiffrer le fichier. Le fichier déchiffré était vide, j'ai passé beaucoup d'heures à trouver d'ou venait le problème.
-- Lors de la conversion du fichier python en .exe, je devais rendre possible l'execution du fichier .exe sur un système Windows 7 pour pouvoir exploiter la faille. Cela m'a aussi pris du temps.
+
+
+
 
 
 ## Améliorations possibles
@@ -280,3 +282,9 @@ Ensuite, il ne reste plus qu'à se rendre dans le répertoire "Desktop" avec l'i
 - Il est possible d'améliorer le ransomware pour qu'il se diffuse aux autres ordinateurs du réseau mais ça demande un travail assez conséquent.
 - Ici, notre ransomware serait facilement arrêté par un antivirus mais mes tests ont montré qu'il est possible de bypasser l'anti-virus en executant le .exe depuis le terminal. 
 - La clé pour dechiffrer n'est pas difficilement trouvable vu qu'elle n'est pas réellement effacé. Cependant, l'effacer n'est pas difficile mais je n'ai pas pu continuer par manque de temps.
+
+
+
+## Difficultés rencontrées
+- J'ai rencontré des difficultés à déchiffrer le fichier. Le fichier déchiffré était vide, j'ai passé beaucoup d'heures à trouver d'ou venait le problème.
+- Lors de la conversion du fichier python en .exe, je devais rendre possible l'execution du fichier .exe sur un système Windows 7 pour pouvoir exploiter la faille. Cela m'a aussi pris du temps à adapter. Pour cela, la documentation de pyinstaller m'a aidé.
