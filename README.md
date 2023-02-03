@@ -223,10 +223,40 @@ Le fichier .exe a été généré à l'aide de Pyinstaller. Sur l'image, il s'ag
 
 ## Exploitation de Eternalblue doublepulsar
 
-A venir
+Passons à l'étape consistant à l'exploitation d'une faille Windows de connexion à distance (RDE: Remote Desktop Exploit). La faille que l'on va utiliser est très connue, il s'agit de Eternalblue Doublepulsar, elle est présente dans les versions de Windows antérieur à Windows 8. Il s'agit donc des versions Windows 7 et moins.
 
+Pour notre démonstration, nous utiliserons une version de Windows 7 n'ayant pas été patché. Les commandes à executer sont plutôt simple.
+Nous commencons par utiliser nmap pour scanner l'ensemble des ports ouvets de notre machine vulnérable.
 
+'''
+nmap -p 3389 "ip machine vulnérable"
+'''
 
+Le port 3389 doit avoir le statut "open". Si ce n'est pas le cas, vous devez l'activer sur votre machine Windows.
+
+Passons à l'utilisation de Metasploit. Metasplit est un logiciel ayant pour but de fournir des informations sur les vulnérabilités de systèmes informatiques, nous commençons par analyser les versions présentes de l'exploit sur notre système.
+
+'''search bluekeep'''
+Nous observons qu'il y'a l'auxiliary et l'exploit de Bluekeep. De ce que j'ai pu comprendre, le premier permet de vérifier que la machine est bien vulnérable en vérifiant qu'elle possède un protocole de RCE (accès à distance).
+Le deuxième est l'exploit en lui-même qui nous permet d'avoir accès directement aux commandes de la machine.
+![2](https://user-images.githubusercontent.com/123843120/216727247-5b763cfe-92d6-40ff-874a-04d7368227d4.png)
+Ce qui donne donc ça:
+![3](https://user-images.githubusercontent.com/123843120/216727269-a9b6d37b-70e2-4f2a-bfd1-e4e659bb4c89.png)
+
+Concernant l'exploit, nous utilisions la commande '''show options'''. Cette commande permet de nous détailler les options nécessaires pour pouvoir lancer l'exploit. Ici, nous voyons qu'il est nécessaire de donner les adresses IP Rhosts et Lhost. Ils représentent respectivement l'IP de la victime et de l'attaquant. En pratique, Lhost se définit automatiquement comme l'IP de la machine de l'attaquant (ici 192.168.1.95).
+![4](https://user-images.githubusercontent.com/123843120/216727303-73dcfe76-213b-4f99-9a67-b679778c10e2.png)
+
+Ensuite, nous configurons la machine qui sera la victime, en accord avec ce que le scan nmap nous a donné (le scan donne la version de l'OS de la victime).
+![5](https://user-images.githubusercontent.com/123843120/216728108-41033e21-911c-47ec-9cea-2eb4291cdfcc.png)
+
+On voit alors qu'en bas de notre "show options", il y'a les détails de l'exploit target.
+![6](https://user-images.githubusercontent.com/123843120/216728215-225b312a-9213-41f3-984c-d1f1da5ddaf5.png)
+
+Nous avons configuré toutes les options obligatoires, il ne nous reste plus qu'à exploiter la faille avec la commande
+'''exploit'''
+
+Nous avons alors accès à la console de la victime. Il reste à télécharger le ransomware depuis un lien ou nous l'avons publié (pour moi, sur Filetransfer) depuis l'invité de commande. Pour cela, 
+'''
 
 ## Difficultés rencontrées
 - J'ai rencontré des difficultés à déchiffrer le fichier. Le fichier déchiffré était vide, j'ai passé beaucoup d'heures à trouver d'ou venait le problème.
