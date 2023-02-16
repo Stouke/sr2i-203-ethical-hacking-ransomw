@@ -2,7 +2,7 @@
 
 # Introduction
 
-Dans un but éducatif, ce projet concerne la création d'un ransomware et de l'exploitation d'une vulnérabilité Windows pour l'utiliser. 
+Dans un but éducatif, ce projet concerne la création d'un ransomware et de l'exploitation d'une vulnérabilité Windows pour l'utiliser. Rappelons qu'il est illégal d'utiliser ce genre de logiciel sur une machine qui ne vous appartient pas, quelqu'en soit le but.
 
 Commençons par rappeler le principe d'un ransomware: Il s'agit d'un logiciel malveillant qui lors de son execution chiffre l'ensemble des fichiers présents sur l'ordinateur de la victime. La victime n'a donc plus accès à ses fichiers qui sont cryptés et seul l'attaquant possède la clé de déchiffrement. Ces attaques sont parmi les attaques informatiques les plus répandues alors nous vous recommandons de ne jamais ouvrir un fichier sans vérification, que vous le receviez par mail ou autre.
 
