@@ -1,5 +1,7 @@
 # SR2I 203 - Ethical Hacking - Ransomw
 
+Warning: Only use this software according to your current legislation. Misuse of this software can raise legal and ethical issues which I don't support nor can be held responsible for.
+
 # Introduction
 
 Dans un but éducatif, ce projet concerne la création d'un ransomware et de l'exploitation d'une vulnérabilité Windows pour l'utiliser. Rappelons qu'il est illégal d'utiliser ce genre de logiciel sur une machine qui ne vous appartient pas, quelqu'en soit le but.
